@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class calculadora {
     
-    private int n1, n2,opc,res;
+    private int n1, n2,opc,res,n3,n4;
     
     private Scanner entrada = new Scanner(System.in);
     
@@ -85,10 +85,10 @@ public class calculadora {
     //receber valor porcentagem
     public void SetPorcentagem(){
         System.out.println("Digite o Valor Total: ");
-        this.n1 = entrada.nextInt();
+        this.n3 = entrada.nextInt();
     }
     public int GetPorcentagem(){
-        return this.n1;
+        return this.n3;
     }
     
     
@@ -97,38 +97,38 @@ public class calculadora {
     //receber valor da taxa
     public void SetTaxa(){
         System.out.println("Digite a taxa da Porcentagem: ");
-        this.n1 = entrada.nextInt();
+        this.n4 = entrada.nextInt();
     }
     public int GetTaxa(){
-        return this.n1;
+        return this.n4;
     }
 
     
     
     //calculando a porcentagem em cima do valor
-    public void CalcPorcentagem (int n1, int n2){
+    public void CalcPorcentagem (int n3, int n4){
         
-        res = (n1 * 100/ n2);
+        res =  (n3 * (100/n4));
 
-         System.out.println(""+n1+"% de "+n2+" = "+res);
+         System.out.println(""+n3+"% de "+n4+" = "+res);
     }
     
     
     
     
     //Calculando Acrescimo
-    public void CalcAcrescimo(int n1, int n2){
-       res = ((n1 * 100)/n2)+n2 ; 
-        System.out.println(""+n1+"% de "+n2+" = "+res);
+    public void CalcAcrescimo(int n3, int n4){
+       res = (((n3 * 100)/n4)+res) ; 
+        System.out.println(""+n3+"% de "+n4+" = "+res);
     }
     
     
     
     
     //calculando desconto
-    public void CalcDesconto(int n1, int n2){
-       res = ((n1 * 100)/n2)-n2 ; 
-        System.out.println(""+n1+"% de "+n2+" = "+res);
+    public void CalcDesconto(int n3, int n4){
+       res = (((n3 * 100)/n4)-res) ; 
+        System.out.println(""+n3+"% de "+n4+" = "+res);
     }
     
     
@@ -164,7 +164,7 @@ public class calculadora {
     //metodo de Sair
     public void Sair (){
         System.out.println("Sistema Encerrrado!");
-        System.exit(7);
+        System.exit(0);
     }
     
     

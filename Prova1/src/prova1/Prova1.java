@@ -14,8 +14,7 @@ public class Prova1 {
                 c.MsgInvalida();
 
             }
-            
-            
+ 
             if (c.GetOPC() == 1) {
                 c.SetBase();
                 c.SetExpoente();
@@ -23,12 +22,10 @@ public class Prova1 {
                     c.MsgNegativos();
 
                 } else {
-                    c.CalcPotencia(c.GetBase(), c.GetExpoente());
+                    c.CalcPotencia(c.GetBase(),c.GetExpoente());
                 }
 
-            }
-            
-            
+            } 
             if (c.GetOPC() == 2) {
                 c.SetFatorial();
                 c.CalcFatorial(c.GetFatorial());
@@ -39,6 +36,30 @@ public class Prova1 {
                 c.SetPorcentagem();
                 c.SetTaxa();
                 c.CalcPorcentagem(c.GetPorcentagem(), c.GetTaxa());
+            }
+            
+            
+            if(c.GetOPC() ==4){
+                c.SetPorcentagem();
+                c.SetTaxa();
+                c.CalcAcrescimo(c.GetPorcentagem(),c.GetTaxa());
+                
+            }
+            
+            
+            if(c.GetOPC() ==5){
+                c.SetPorcentagem();
+                c.SetTaxa();
+                c.CalcAcrescimo(c.GetPorcentagem(),c.GetTaxa());
+                
+            }
+            
+            if(c.GetOPC()==6){
+                
+            }
+            
+            if(c.GetOPC() == 7){
+                c.Sair();
             }
 
         } while (c.GetOPC() >= 1 && c.GetOPC() <= 6);
