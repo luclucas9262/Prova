@@ -6,9 +6,9 @@ import java.util.Scanner;
 
 public class calculadora {
     
-    private int n1, n2,opc,res,n3,n4;
+    private int n1, n2,opc,res,n3,n4,n5,n6,n7,n8;
     
-    private Scanner entrada = new Scanner(System.in);
+    Scanner entrada = new Scanner(System.in);
     
     
     
@@ -17,7 +17,7 @@ public class calculadora {
      //coletar o N1
     public void SetBase(){
         System.out.println("Informe a Base: ");
-        this.n1 = entrada.nextInt();
+        this.n1 = this.entrada.nextInt();
         
     }
     public int GetBase(){
@@ -27,7 +27,7 @@ public class calculadora {
     //coletar o N2
     public void SetExpoente(){
         System.out.println("Informe o expoente: ");
-        this.n2 = entrada.nextInt();
+        this.n2 = this.entrada.nextInt();
         
     }
     public int GetExpoente(){
@@ -36,8 +36,8 @@ public class calculadora {
     }
     
     public void CalcPotencia(int n1,int n2){
-        res = (int) Math.pow(n1, n2);
-        System.out.println(n1+" ^ "+n2+" = "+res);
+        this.res = (int) Math.pow(n1, n2);
+        System.out.println(n1+" ^ "+n2+" = "+this.res);
     }
     
     
@@ -47,7 +47,7 @@ public class calculadora {
     //coleta a opção do usuario
     public void SetOPC(){
         System.out.println("Digite a Opção Desejada: ");
-        this.opc = entrada.nextInt();
+        this.opc = this.entrada.nextInt();
     }
     
     public int GetOPC(){
@@ -60,7 +60,7 @@ public class calculadora {
     //recebe o valor fatorial
     public void SetFatorial(){
         System.out.println("Informe o numero: ");
-        this.n1 = entrada.nextInt();
+        this.n1 = this.entrada.nextInt();
     }
     
     public int GetFatorial(){
@@ -85,7 +85,7 @@ public class calculadora {
     //receber valor porcentagem
     public void SetPorcentagem(){
         System.out.println("Digite o Valor Total: ");
-        this.n3 = entrada.nextInt();
+        this.n3 = this.entrada.nextInt();
     }
     public int GetPorcentagem(){
         return this.n3;
@@ -97,7 +97,7 @@ public class calculadora {
     //receber valor da taxa
     public void SetTaxa(){
         System.out.println("Digite a taxa da Porcentagem: ");
-        this.n4 = entrada.nextInt();
+        this.n4 = this.entrada.nextInt();
     }
     public int GetTaxa(){
         return this.n4;
@@ -106,29 +106,29 @@ public class calculadora {
     
     
     //calculando a porcentagem em cima do valor
-    public void CalcPorcentagem (int n3, int n4){
+    public void CalcPorcentagem (double n3, double n4){
         
-        res =  (n3 * (100/n4));
+        this.res = (int) ((int) n3 * (n4/100));
 
-         System.out.println(""+n3+"% de "+n4+" = "+res);
+         System.out.println(""+n4+"% de "+n3+" = "+this.res);
     }
     
     
     
     
     //Calculando Acrescimo
-    public void CalcAcrescimo(int n3, int n4){
-       res = (((n3 * 100)/n4)+res) ; 
-        System.out.println(""+n3+"% de "+n4+" = "+res);
+    public void CalcAcrescimo(double n5, double n6){
+      this.res = (int) ((int) n5 * (n6/100)); 
+        System.out.println(""+n5+"% de "+n6+" =  de Juros "+(this.res+n5));
     }
     
     
     
     
     //calculando desconto
-    public void CalcDesconto(int n3, int n4){
-       res = (((n3 * 100)/n4)-res) ; 
-        System.out.println(""+n3+"% de "+n4+" = "+res);
+    public void CalcDesconto(double n7, double n8){
+       this.res = (int) ((int) n7 * (n8/100));
+        System.out.println(""+n7+"% de "+n8+" = de Desconto "+(this.res-n7));
     }
     
     

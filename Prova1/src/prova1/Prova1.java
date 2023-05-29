@@ -50,12 +50,17 @@ public class Prova1 {
             if(c.GetOPC() ==5){
                 c.SetPorcentagem();
                 c.SetTaxa();
-                c.CalcAcrescimo(c.GetPorcentagem(),c.GetTaxa());
+                c.CalcDesconto(c.GetPorcentagem(),c.GetTaxa());
                 
             }
             
             if(c.GetOPC()==6){
-                
+                c.SetFatorial();
+                if(c.GetFatorial() % 2==0){
+                    System.out.println("É par !");
+                }else{
+                    System.out.println("É impar!");
+                }
             }
             
             if(c.GetOPC() == 7){
